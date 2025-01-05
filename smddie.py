@@ -1,4 +1,4 @@
-# pritn é uma função interna do python (building function)
+# print é uma função interna do python (building function)
 
 
 n1 = int(input("Digite um valor: "))
