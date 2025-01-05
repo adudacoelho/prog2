@@ -1,6 +1,10 @@
-km = int( input ("Qual a quantidade de Km percorridos por um carro alugado? "))
-dias = float(input("Por quantos dias? "))
+def main():
 
-carro = ( km * 60 ) + ( dias * 0.15)
+    km = float(input("Qual a quantidade de km percorridos pelo carro? "))
+    dias = int(input("Qual a quantidade de dias pelo qual ele foi alugado? "))
 
-print("O preço a ser pago pelo carro é R$ {:.2f}" .format(carro))
+    preço = (60 * dias) + (0.15 * km)
+
+    print("O total a pagar é de R${:.2f}" .format(preço))
+    
+main()
