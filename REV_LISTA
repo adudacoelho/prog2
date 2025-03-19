@@ -1,28 +1,58 @@
 def removeAcentos(palavra):
+   palavra = palavra.lower()
    novapalavra = ""
 
-for i in range(0, len(palavra)): # vai de 0 a 9, primeiro indica o início e o segundo o tamanho
+
+   for i in range(0, len(palavra)): #vai de 0 a 9, primeiro indica o início e o segundo o tamanho
    
-    if (palavra[i] == "à") or (palavra[i] == "á") or 
+            if (palavra[i] == "à") or (palavra[i] == "á") or (palavra[i] == "â") or  (palavra[i] == "ã") or  (palavra[i] == "ä"):
 
-       if palavra[i].islower():
-           novapalavra = novapalavra + "a"
-       else:
-           novapalavra = novapalavra + "A"
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "a"
+                else:
+                    novapalavra = novapalavra + "A"
+            elif (palavra[i] == "é") or (palavra[i] == "ê"):
 
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "e"
+                else:
+                    novapalavra = novapalavra + "E"
+            elif (palavra[i] == "í") or (palavra[i] == "ì"):
 
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "i"
+                else:
+                    novapalavra = novapalavra + "I"
+            elif (palavra[i] == "ô") or (palavra[i] == "õ") or (palavra[i] == "ó"):
 
-    else: 
-        novapalavra = novapalavra + palavra[i]
-return novapalavra 
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "o"
+                else:
+                    novapalavra = novapalavra + "O"
+            elif (palavra[i] == "ü") or (palavra[i] == "ú") or (palavra[i] == "ù"):
+
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "u"
+                else:
+                    novapalavra = novapalavra + "U"
+            elif (palavra[i] == "ç"):
+
+                if palavra[i].islower():
+                    novapalavra = novapalavra + "c"
+                else:
+                    novapalavra = novapalavra + "C"
+
+            else: 
+                novapalavra = novapalavra + palavra[i]
+
+   return novapalavra 
 
 #fim removeAcentos 
-for char in palavra: #iterator
+#for char in palavra: #iterator
        
-   
-
 def main():
-    palavra = input("Digite uma palavra: ")
+
+    palavra = "OS meninos estão gostando muito de pípa e môstro"
     palavra_sa = removeAcentos(palavra)
 
     print("Antes: ", palavra)
